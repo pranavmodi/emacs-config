@@ -1,0 +1,410 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/pranav/personal/emacs backup/" . ".emacs.d/")
+ ("/Users/pranav/work/featuresextraction/src/java/com/twitter/maple/" . "hbase/")
+ ("/Users/pranav/work/featuresextraction/src/java/com/twitter/" . "maple/")
+ ("/Users/pranav/work/featuresextraction/src/java/com/" . "twitter/")
+ ("/Users/pranav/work/featuresextraction/src/java/" . "com/")
+ ("/Users/pranav/work/featuresextraction/test/featuresextraction/" . "test/")
+ ("/Users/pranav/work/featuresextraction/test/" . "featuresextraction/")
+ ("/Users/pranav/work/runa/furtive/tests/integration/furtive/" . "rabbitmq/")
+ ("/Users/pranav/work/runa/furtive/tests/integration/" . "furtive/")
+ ("/Users/pranav/work/runa/furtive/tests/" . "integration/")
+ ("/Users/pranav/work/featuresextraction/" . "src/")
+ ("/Users/pranav/work/featuresextraction/src/" . "featuresextraction/")
+ ("/Users/pranav/work/cascatrial/src/java/cascading/flow/" . "stream/")
+ ("/Users/pranav/work/cascatrial/src/java/cascading/" . "flow/")
+ ("/Users/pranav/work/cascading/src/core/cascading/flow/" . "stream/")
+ ("/Users/pranav/work/cascading/src/core/cascading/" . "tuple/")
+ ("/Users/pranav/work/cascading/src/core/" . "cascading/")
+ ("/Users/pranav/work/cascading/src/" . "core/")
+ ("/Users/pranav/work/cascading/" . "src/")
+ ("/Users/pranav/work/cascatrial/src/java/" . "com/")
+ ("/Users/pranav/work/cascatrial/src/java/com/twitter/maple/" . "hbase/")
+ ("/Users/pranav/work/cascatrial/src/java/com/twitter/" . "maple/")
+ ("/Users/pranav/work/cascatrial/src/java/com/" . "twitter/")
+ ("/Users/pranav/personal/vision-code/Visionhttpclient/http/mongobackup/src/ekahau/" . "vision/")
+ ("/Users/pranav/personal/vision-code/Visionhttpclient/http/mongobackup/src/" . "ekahau/")
+ ("/Users/pranav/personal/vision-code/Visionhttpclient/http/mongobackup/" . "src/")
+ ("/Users/pranav/personal/vision-code/Visionhttpclient/http/" . "mongobackup/")
+ ("/Users/pranav/personal/vision-code/Visionhttpclient/" . "http/")
+ ("/Users/pranav/personal/vision-code/" . "Visionhttpclient/")
+ ("/Users/pranav/work/runa/furtive/src/furtive/redqueen/promos/" . "selection/")
+ ("/Users/pranav/work/runa/furtive/src/furtive/schemas/" . "redqueen/")
+ ("/Users/pranav/work/runa/furtive/src/furtive/redqueen/" . "models/")
+ ("/Users/pranav/work/runa/furtive/src/furtive/" . "utils/")
+ ("/Users/pranav/work/runa/furtive/src/" . "furtive/")
+ ("/Users/pranav/work/runa/furtive/" . "src/")
+ ("/Users/pranav/work/runa/" . "furtive/")
+ ("/Users/pranav/work/runa/runa_cookbooks/config/vagrant/" . "runastack/")
+ ("/Users/pranav/work/runa/runa_cookbooks/config/" . "vagrant/")
+ ("/Users/pranav/work/runa/runa_cookbooks/" . "config/")
+ ("/Users/pranav/work/furtive/src/furtive/redqueen/models/" . "store/")
+ ("/Users/pranav/work/furtive/src/furtive/redqueen/" . "models/")
+ ("/Users/pranav/work/furtive/src/furtive/" . "schemas/")
+ ("/Users/pranav/work/furtive/src/" . "furtive/")
+ ("/master0-base0-cluster5.runa.com:/" . "/")
+ ("/ssh:master0-base0-cluster5.runa.com:/home/pranav/cascatrial/" . "src/")
+ ("/master0-base0-cluster5.runa.com:/home/pranav/" . "cascatrial/")
+ ("/master0-base0-cluster5.runa.com:/home/pranav/cascatrial/src/" . "cascatrial/")
+ ("/scp:master0-base0-cluster5.runa.com:/home/pranav/cascatrial/" . "src/")
+ ("/Users/pranav/work/hbase-likely/src/" . "hbase_likely/")
+ ("/Users/pranav/work/hbase-likely/" . "src/")
+ ("/Users/pranav/work/hbase-java-sample/src/com/yujikosuga/" . "hbase/")
+ ("/Users/pranav/work/hbase-java-sample/src/com/" . "yujikosuga/")
+ ("/Users/pranav/work/hbase-java-sample/src/" . "com/")
+ ("/Users/pranav/.emacs.d/" . "elpa/")
+ ("/Users/pranav/work/caterpillar/recipies/profitlift_modelling/" . "combined_axis/")
+ ("/Users/pranav/work/caterpillar/recipies/" . "profitlift_modelling/")
+ ("/Users/pranav/work/caterpillar/src/" . "featuresextraction/")
+ ("/Users/pranav/work/caterpillar/" . "src/")
+ ("/Users/pranav/work/scripts/" . "pranav/")
+ ("/Users/pranav/work/hadoop-1.0.3/src/mapred/org/apache/hadoop/" . "mapred/")
+ ("/Users/pranav/work/hadoop-1.0.3/src/mapred/org/apache/" . "hadoop/")
+ ("/Users/pranav/work/hadoop-1.0.3/src/mapred/org/" . "apache/")
+ ("/Users/pranav/work/hadoop-1.0.3/src/mapred/" . "org/")
+ ("/Users/pranav/work/hadoop-1.0.3/src/examples/org/apache/hadoop/examples/" . "dancing/")
+ ("/Users/pranav/work/hadoop-1.0.3/src/examples/org/apache/hadoop/" . "examples/")
+ ("/Users/pranav/work/hadoop-1.0.3/src/examples/org/apache/" . "hadoop/")
+ ("/Users/pranav/work/hadoop-1.0.3/src/examples/org/" . "apache/")
+ ("/Users/pranav/work/hadoop-1.0.3/src/examples/" . "org/")
+ ("/Users/pranav/work/hadoop-1.0.3/src/" . "mapred/")
+ ("/Users/pranav/work/present-casca/" . "src/")
+ ("/Users/pranav/work/present-casca/src/" . "present_casca/")
+ ("/Users/pranav/work/cascalog-examples/src/sthuebner/" . "cascalog/")
+ ("/Users/pranav/work/cascalog-examples/src/" . "sthuebner/")
+ ("/Users/pranav/work/cascalog-examples/" . "src/")
+ ("/Users/pranav/work/data/ido/cascatrial/" . "out/")
+ ("/Applications/Gnuplot.app/Contents/Resources/" . "bin/")
+ ("/Applications/Gnuplot.app/Contents/" . "Resources/")
+ ("/Applications/Gnuplot.app/" . "Contents/")
+ ("/Applications/" . "Gnuplot.app/")
+ ("/Users/pranav/work/cascalog-demo/data/" . "follows/")
+ ("/tmp/" . "something/")
+ ("/Users/pranav/work/cascalog-demo/src/clj/" . "cascalog_demo/")
+ ("/Users/pranav/work/cascalog-demo/src/" . "clj/")
+ ("/Users/pranav/work/cascalog-demo/" . "src/")
+ ("/Users/pranav/work/cascatrial/src/" . "cascatrial/")
+ ("/Users/pranav/work/hbase-cascalog/src/clj/hbase/" . "cascalog/")
+ ("/Users/pranav/work/hbase-cascalog/src/clj/" . "hbase/")
+ ("/Users/pranav/work/hbase-cascalog/src/" . "clj/")
+ ("/Users/pranav/work/cascatrial/" . "src/")
+ ("/Users/pranav/.emacs.d/elpa/" . "slime-clj-0.1.5/")
+ ("/Users/pranav/work/cascalog/test/" . "cascalog/")
+ ("/Users/pranav/work/cascalog/" . "src/")
+ ("/Users/pranav/work/cascalog/src/clj/" . "cascalog/")
+ ("/Users/pranav/work/cascalog/src/" . "clj/")
+ ("/Users/pranav/work/hadoop-1.0.3/" . "output/")
+ ("/Users/pranav/work/data/ido/" . "s1/")
+ ("/Users/pranav/work/maple/src/jvm/com/twitter/maple/" . "jdbc/")
+ ("/Users/pranav/work/maple/src/jvm/com/twitter/" . "maple/")
+ ("/Users/pranav/work/maple/src/jvm/com/" . "twitter/")
+ ("/Users/pranav/work/maple/src/jvm/" . "com/")
+ ("/Users/pranav/work/maple/src/" . "jvm/")
+ ("/Users/pranav/work/maple/" . "src/")
+ ("/Users/pranav/work/hbase-0.92.1/" . "logs/")
+ ("/Users/pranav/work/clojure-hadoop/examples/" . "clojure-hadoop/")
+ ("/Users/pranav/work/data/cr1/" . "append-hist/")
+ ("/Users/pranav/work/data/" . "ido/")
+ ("/Users/pranav/work/hbasenew/src/" . "tdir/")
+ ("/Users/pranav/work/clojure-hadoop/src/" . "clojure_hadoop/")
+ ("/Users/pranav/work/clojure-hadoop/" . "src/")
+ ("/Users/pranav/work/clojure-hadoop/test/clojure_hadoop/" . "examples/")
+ ("/Users/pranav/work/clojure-hadoop/test/" . "clojure_hadoop/")
+ ("/Users/pranav/.m2/repository/clojure-hbase/" . "clojure-hbase/")
+ ("/Users/pranav/.m2/repository/" . "clojure-hbase/")
+ ("/Users/pranav/.m2/" . "repository/")
+ ("/Users/pranav/work/hbasenew/" . "src/")
+ ("/Users/pranav/work/clojure-hbase/" . "src/")
+ ("/Users/pranav/work/clojure-hbase/src/" . "clojure_hbase/")
+ ("/Users/pranav/work/hbasetrial/" . "src/")
+ ("/Users/pranav/personal/ocm/ml/" . "ex1/")
+ ("/Users/pranav/personal/ocm/pgm/" . "PGM_Ass4/")
+ ("/Users/pranav/personal/ocm/" . "ml/")
+ ("/Users/pranav/personal/" . "emacs backup/")
+ ("/Users/pranav/work/dataout/" . "shoesout/")
+ ("/" . "Users/")
+ ("/Users/pranav/work/dataextraction/" . "src/")
+ ("/Users/pranav/work/furtive/lib/" . "java-hbase9/")
+ ("/Users/pranav/work/furtive/" . "src/")
+ ("/Users/pranav/work/dataextraction/src/" . "dataextraction/")
+ ("/Users/pranav/work/" . "featuresextraction/")
+ ("/Users/pranav/" . "personal/")
+ ("/Users/" . "pranav/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/pranav/work/runa/furtive/src/furtive/utils/"
+ "/Users/pranav/personal/emacs backup/.emacs.d/"
+ "/Users/pranav/.emacs.d/"
+ "/Users/pranav/work/cascatrial/"
+ "/Users/pranav/work/runa/furtive/src/furtive/"
+ "/etc/"
+ "/Users/pranav/.aws/"
+ "/Users/pranav/work/runa/runa_cookbooks/config/vagrant/runastack/"
+ "/Users/pranav/work/featuresextraction/src/featuresextraction/"
+ "/Users/pranav/work/caterpillar/src/featuresextraction/"
+ "/Users/pranav/work/featuresextraction/"
+ "/Users/pranav/work/caterpillar/"
+ "/tmp/something/"
+ "/Users/pranav/personal/"
+ "/Users/pranav/work/featuresextraction/test/featuresextraction/test/"
+ "/Users/pranav/personal/trialdatomic/"
+ "/Users/pranav/work/featuresextraction/src/java/com/twitter/maple/hbase/"
+ "/tmp/core/"
+ "/Users/pranav/work/data/wcout2/"
+ "/tmp/extracted/"
+ "/tmp/extractedfeatures/"
+ "/tmp/features/"
+ "/tmp/newdata/"
+ "/tmp/serenitydata/"
+ "/Users/pranav/work/data/"
+ "/Users/pranav/work/runa/furtive/tests/integration/furtive/rabbitmq/"
+ "/tmp/pmBig/"
+ "/tmp/ppp/"
+ "/Users/pranav/work/cascalog/src/clj/cascalog/"
+ "/Users/pranav/work/cascatrial/src/cascatrial/"
+ "/Users/pranav/work/data/ido/s1/"
+ "/Users/pranav/work/data/ido/"
+ "/Users/pranav/work/scripts/"
+ "/Users/pranav/work/cascatrial/src/java/"
+ "/Users/pranav/work/cascatrial/src/java/com/twitter/maple/hbase/"
+ "/Users/pranav/work/cascatrial/src/java/com/twitter/maple/jdbc/"
+ "/Users/pranav/work/"
+ "/Users/pranav/work/cascatrial/src/java/com/twitter/maple/jdbc/db/"
+ "/Users/pranav/work/cascatrial/src/java/cascading/flow/stream/"
+ "/Users/pranav/work/cascatrial/src/java/cascading/scheme/"
+ "/Users/pranav/work/cascatrial/src/java/com/twitter/maple/tap/"
+ "/Users/pranav/work/hbase-0.92.1/logs/"
+ "/Users/pranav/work/cascatrial/src/java/cascading/tuple/"
+ "/Users/pranav/work/cascatrial/src/java/cascading/"
+ "/Users/pranav/work/cascading/src/core/cascading/tuple/"
+ "/Users/pranav/work/cascading/src/core/cascading/scheme/"
+ "/Users/pranav/work/cascading/"
+ "/Users/pranav/work/cascading/src/core/cascading/flow/"
+ "/Users/pranav/work/cascading/src/core/cascading/tap/"
+ "/Users/pranav/work/cascading/src/core/cascading/util/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "core.clj"
+ "init.el"
+ "project.clj"
+ "init.clj"
+ "hosts"
+ "aws_config.yml"
+ "Vagrantfile"
+ "events.clj"
+ "part-00000"
+ "dtdc"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/pranav/work/runa/furtive/src/furtive/utils/" (20510 44288) "xml.clj" "timestamp.clj" "string.clj" "stats.clj" "security.clj" "s3.clj" "recompute_session_analytics_core.clj" "log_parser.clj" "js_compression.clj" "html.clj" "general.clj" "gen-exception-logs.sh" "fixup_extra_order_ids.clj" "file.clj" "excel_utils.clj" "environment.clj" "defrecord_factory.clj" "core.clj" "collections.clj" "closure.clj" "closeableseq.clj" "calendar.clj" "calculators.clj" "cache.clj" "benchmark.clj" "../" "./")
+
+ ("/Users/pranav/personal/emacs backup/.emacs.d/" (20511 50759) "url/" "tramp" "swank/" "places" "init.el~" "init.el" "elpa/" "backups/" "auto-save-list/" ".smex-items" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/personal/emacs backup/" (20511 47783) ".emacs.d/" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/personal/" (20511 47778) "Windoze8.pvm/" "Windoze7.pvm/" "vision-code/" "vision/" "ujj down/" "trialdatomic/" "toshiba laptop stuff/" "The.Newsroom.2012.S01E01.HDTV.x264-ASAP.mp4" "songs/" "R scripts/" "ocm/" "movies/" "Mad.Men.S03E13.Shut.the.Door.Have.a.Seat.HDTV.XviD-FQM.avi" "Mad.Men.S03E12.HDTV.XviD-hV.avi" "Mad.Men.S03E11.The.Gypsy.and.the.Hobo.HDTV.XviD-FQM.avi" "Mad.Men.S03E10.The.Color.Blue.HDTV.XviD-FQM.avi" "hisaab/" "got s1/" "ESLII_print5.pdf" "emacs backup/" "dtdc" "Download/" "dm-stat.pdf" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/.emacs.d/" (20512 2678) "swank/" "places" "init.el" "elpa/" "backups/" "auto-save-list/" ".smex-items" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/" (20512 2094) "work/" "VirtualBox VMs/" "temp.txt" "temp.m" "Sites/" "Send Registration" "Public/" "Pictures/" "personal/" "octave-core" "Music/" "Movies/" "Library/" "Downloads/" "Documents/" "Desktop/" "Applications (Parallels)/" ".zshrc" ".zlogin" ".Xcode/" ".vimrc" ".viminfo" ".vim-fuf-data/" ".vim/" ".vagrant.d/" ".Trash/" ".ssh/" ".slime_paste" ".slime-history.eld" ".sh_history" ".rvm/" ".recentf" ".Rapp.history" ".putty/" ".profile" ".octave_hist" ".m2/" ".lein/" ".jline-reply.history" ".jline-clojure.main.history" ".ido.last" ".idlerc/" ".gnuplot_history" ".gitconfig" ".gem/" ".fontconfig/" ".filezilla/" ".emacs.d/" ".DS_Store" ".config/" ".chef/" ".CFUserTextEncoding" ".cache/" ".bashrc" ".bash_login" ".bash_history" ".aws/" "../" "./")
+
+ ("/Users/pranav/.emacs.d/elpa/" (20469 18867) "starter-kit-20120518/" "smex-20120301/" "slime-ritz-20120612/" "slime-ritz-0.3.2/" "slime-20100404.1/" "paredit-20110508/" "magit-20120616/" "ido-ubiquitous-20120412/" "idle-highlight-mode-20110817/" "find-file-in-project-20110903/" "clojure-mode-20120702/" "archives/" "../" "./")
+
+ ("/Users/pranav/work/runa/furtive/src/furtive/" (20510 44288) "whitequeen/" "utils/" "sevak/" "serenity/" "scripts/" "schemas/" "sarlacc/" "reporting.clj" "reporting/" "redqueen/" "rabbitmq/" "panopticon/" "monitoring.clj" "monitoring/" "mocks/" "io/" "init.clj" "import.clj" "hbase/" "hatter/" "data/" "core/" "consumer_event/" "cheshire/" "ansible/" "../" "./")
+
+ ("/Users/pranav/work/runa/furtive/src/" (20510 44288) "furtive/" "../" "./")
+
+ ("/Users/pranav/work/runa/furtive/" (20510 44288) "vendor/" "utils/" "tiny_fujure.sh" "tests/" "test_multi_hbase_conn.clj" "templates/" "static-content/" "start" "src/" "spec/" "small_fujure.sh" "selenium/" "scripts/" "run_sum.rb" "run_script" "README.md" "Rakefile" "pujure.sh" "patches/" "model-data/" "miniscule_fujure.sh" "medium_fujure.sh" "lib/" "lab/" "fujure.sh" "dujure.sh" "docs/" "db/" "config/" "big_fujure.sh" "b.txt" "a.txt" ".gitmodules" ".gitignore" ".git/" ".clojure.conf.example" "../" "./")
+
+ ("/etc/" (20511 22119) "zshenv" "xtab" "xgrid/" "ttys" "syslog.conf" "sudoers" "sshd_config" "ssh_config" "snmp/" "smb.conf.template" "smb.conf.old" "smb.conf" "shells" "services" "security/" "rtadvd.conf" "rpc" "rmtab" "resolv.conf" "RemoteManagement.launchd" "rc.netboot" "rc.common" "racoon/" "protocols" "profile" "ppp/" "postfix/" "php.ini.default" "periodic/" "paths.d/" "paths" "passwd" "pam.d/" "openldap/" "ntp.conf" "ntp-restrict.conf" "notify.conf" "newsyslog.d/" "newsyslog.conf" "networks" "nanorc" "named.conf" "moduli" "memberd.conf" "master.passwd" "manpaths.d/" "manpaths" "man.conf" "mail.rc" "mail/" "mach_init_per_user.d/" "mach_init_per_login_session.d/" "mach_init.d/" "locate.rc" "localtime" "krb5.keytab" "kern_loader.conf" "kcpassword" "irbrc" "hosts~" "hosts.equiv" "hosts" "hostconfig" "group" "gettytab" "gdb.conf" "ftpusers" "ftpd.conf" "fstab.hd" "find.codes" "exportsbak" "exports" "efax.rc" "dnsextd.conf" "defaults/" "cups/" "csh.logout" "csh.login" "csh.cshrc" "com.apple.screensharing.agent.launchd" "bashrc" "autofs.conf" "auto_master" "auto_home" "authorization" "asl.conf" "apache2/" "amavisd.conf" "aliases.db" "aliases" "afpovertcp.cfg" "AFP.conf" "6to4.conf" ".hosts.swp" "#hosts#" "../" "./")
+
+ ("/Users/pranav/.aws/" (20510 42066) "../" "./")
+
+ ("/Users/pranav/work/runa/runa_cookbooks/config/vagrant/runastack/" (20483 44886) "Vagrantfile" ".vagrant" "../" "./")
+
+ ("/Users/pranav/work/runa/runa_cookbooks/config/vagrant/" (20475 53542) "runastack/" "monitor/" "ci/" "chef_env.sh" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/runa/runa_cookbooks/config/" (20475 53542) "vagrant/" "clusters/" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/runa/runa_cookbooks/" (20475 53542) "site-cookbooks/" "scripts/" "roles/" "README.md" "rakelib/" "Rakefile" "lib/" "Gemfile.lock" "Gemfile" "docs/" "data_bags/" "cookbooks/" "config/" "cluster_chef.gemspec" ".gitmodules" ".gitignore" ".git/" ".DS_Store" ".chef/" "../" "./")
+
+ ("/Users/pranav/work/runa/" (20510 40674) "runa_merchant/" "runa_cookbooks/" "oneiric64/" "furtive/" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/caterpillar/src/featuresextraction/" (20510 12422) "utils.clj" "tap.clj" "summary.clj" "feature_vars.clj" "events.clj" "core.clj" "../" "./")
+
+ ("/Users/pranav/work/caterpillar/src/" (20510 13373) "java/" "featuresextraction/" "caterpillar/" "../" "./")
+
+ ("/Users/pranav/work/caterpillar/" (20510 13253) "upload.sh" "test/" "src/" "run_report.sh" "recipies/" "README" "project.clj" "lib/" "hadoop_utils/" "classes/" ".lein-deps-sum" ".gitignore" ".git/" "../" "./")
+
+ ("/tmp/something/" (20510 11983) "part-00000" ".part-00000.crc" "../" "./")
+
+ ("/tmp/" (20510 11981) "something/" "launchd-289.OjBq6y/" "launch-ldfsOA/" "launch-KlyrBg/" "launch-0HDVtx/" "icssuis501" "hbase-pranav-master.pid" "hbase-pranav/" "hadoop-pranav/" "cascalog_reserved/" "0171850235e79" "../" "./")
+
+ ("/Users/pranav/work/featuresextraction/test/featuresextraction/test/" (20507 49246) "core_test.clj" "../" "./")
+
+ ("/Users/pranav/work/featuresextraction/src/featuresextraction/" (20507 48491) "utils.clj" "trial.clj" "tap.clj" "summary.clj" "feature_vars.clj" "events.clj" "core.clj" "../" "./")
+
+ ("/Users/pranav/personal/trialdatomic/" (20508 4728) "test/" "src/" "README" "project.clj" ".gitignore" "../" "./")
+
+ ("/Users/pranav/work/featuresextraction/src/java/com/twitter/maple/hbase/" (20501 3931) "HBaseTapCollector.java" "HBaseTap.java" "HBaseScheme.java" "../" "./")
+
+ ("/Users/pranav/work/featuresextraction/src/java/com/twitter/maple/" (20501 3931) "tap/" "jdbc/" "hbase/" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/featuresextraction/src/java/com/twitter/" (20501 3931) "maple/" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/featuresextraction/src/java/com/" (20501 3931) "twitter/" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/featuresextraction/src/java/" (20501 3950) "MyTableRecordReaderImpl.java" "MyTableRecordReader.java" "MyTableInputFormatBase.java" "MyTableInputFormat.java" "com/" ".DS_Store" "../" "./")
+
+ ("/tmp/core/" (20507 47154) "part-00000" ".part-00000.crc" "../" "./")
+
+ ("/Users/pranav/work/data/wcout2/" (20507 42089) "part-00000" ".part-00000.crc" "../" "./")
+
+ ("/Users/pranav/work/data/" (20507 42088) "wcout2/" "wcout1/" "wcout/" "wc.txt" "temp.txt" "swdata.txt" "sv/" "shoes_temp.txt" "scotwest_in" "ido/" "furtive_production_frylock_session_summary_05a4ad9f-440b-2076-b512-a08d37bea7a0.json.gz" "cw_temp.txt" "cr_temp.txt" "cr1/" "atemp" "917/" ".DS_Store" "#swdata.txt#" "../" "./")
+
+ ("/Users/pranav/work/data/ido/" (20505 2913) "trial" "todel_large" "todel" "test_summary" "test_events" "temp.txt" "summary_ido_s" "summary/" "sum_smallest" "sum_out" "sum_medium" "ss1/" "spit-trial" "s2out/" "s2/" "s1/" "red_merge" "print_hist" "newtemp" "mydebugout_new" "mydebugout" "mydebug" "merged" "mapped_merge" "json_trial" "ido_events_small.txt" "hist_map_small" "hist_map" "hist_file" "hist_features" "for_append/" "finaltemp2" "final_temp" "final3/" "final2/" "final1/" "final/" "eventstemp.txt" "correct/" "cleaned_merge" "cascatrial/" "cascadebug" "000000_0" ".DS_Store" "../" "./")
+
+ ("/tmp/extracted/" (20507 24434) "part-00000" ".part-00000.crc" "../" "./")
+
+ ("/tmp/extractedfeatures/" (20507 23866) "part-00000" ".part-00000.crc" "../" "./")
+
+ ("/tmp/features/" (20507 23474) "part-00000" ".part-00000.crc" "../" "./")
+
+ ("/tmp/newdata/" (20506 29133) "part-00000" ".part-00000.crc" "../" "./")
+
+ ("/tmp/serenitydata/" (20506 26670) "part-00000" ".part-00000.crc" "../" "./")
+
+ ("/Users/pranav/work/featuresextraction/" (20506 17993) "test/" "src/" "README" "project.clj" "lib/" "classes/" ".lein-failures" ".lein-deps-sum" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/featuresextraction/test/featuresextraction/" (20501 3195) "test/" "../" "./")
+
+ ("/Users/pranav/work/featuresextraction/test/" (20501 3195) "featuresextraction/" "../" "./")
+
+ ("/Users/pranav/work/cascalog/src/clj/cascalog/" (20506 8743) "workflow.clj" "vars.clj" "util.clj" "testing.clj" "tap.clj" "rules.clj" "predicate.clj" "playground.clj" "ops_impl.clj" "ops.clj" "io.clj" "graph.clj" "debug.clj" "conf.clj" "api.clj" "../" "./")
+
+ ("/Users/pranav/work/runa/furtive/tests/integration/furtive/rabbitmq/" (20475 48093) "s3_backup_integration_test.clj" "../" "./")
+
+ ("/Users/pranav/work/runa/furtive/tests/integration/furtive/" (20387 47279) "rabbitmq/" "../" "./")
+
+ ("/Users/pranav/work/runa/furtive/tests/integration/" (20387 47279) "furtive/" "../" "./")
+
+ ("/Users/pranav/work/runa/furtive/tests/" (20387 47279) "performance/" "integration/" "hive-queries/" "../" "./")
+
+ ("/tmp/pmBig/" (20506 9272) "part-00000" ".part-00000.crc" "../" "./")
+
+ ("/tmp/ppp/" (20506 9037) "part-00000" ".part-00000.crc" "../" "./")
+
+ ("/Users/" (20460 31419) "Shared/" "runaadmin/" "pranav/" ".localized" "../" "./")
+
+ ("/Users/pranav/work/cascatrial/src/cascatrial/" (20506 7583) "wordcount_reduce.py" "wordcount_map.py" "uncore.clj" "tempevents.clj" "temp.clj" "temp" "summary.clj" "readdata.clj" "presentation.clj~" "presentation.clj" "newcore.clj" "hbasetrial.clj" "hbasenew.clj" "hbase_test.clj" "generators.clj" "dbhbase.clj" "cr_trial.txt" "core.clj" "commented" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/data/ido/s1/" (20457 39183) "tiny" "smallest" "small" "s3out_d" "s2out_d" "newtest" "newdebug" "ido_s1_s.txt" "debug" "aggregate" "000000_0" "../" "./")
+
+ ("/Users/pranav/work/scripts/" (20460 25321) "wordcount.py" "wcreducer.py" "prdax_append_historical_features_reduce.py" "prdax_append_historical_features_map.py" "pranav/" "perax_summary_feature_map.py" "perax_merge_events_summary_features_reduce.py" "perax_merge_events_summary_features_map.py" "perax_hive_events_features_reduce.py" "perax_hive_events_features_map.py" "perax_generate_samples.py" "perax_fix_hive_reduce.py" "perax_fix_hive_map.py" "perax_events_features_map.py" "perax_append_historical_features_reduce.py" "perax_append_historical_features_map.py" "mytrial.py" "keyur/" "events_map_temp.py" "_SUCCESS" ".DS_Store" "#perax_summary_feature_map.py#" "#perax_fix_hive_reduce.py#" "../" "./")
+
+ ("/Users/pranav/Downloads/" (20501 24227) "YouPorn - x art star sex on a summer afternoon 720p.mpg" "vlc-2.0.1-intel64.dmg" "VisionServlet.clj" "VirtualBox-4.1.14-77440-OSX.dmg" "Un.Prophete.2009.DVDRip.XviD.AC3.5.1.HORiZON-ArtSubs/" "ticket folder.zip" "ticket folder/" "thrift-0.8.0.tar.gz" "This Is Spinal Tap (1984).avi" "Thin.Red.Line.1999.720p.HDTV.DTS-x264.srt" "The.Descendants.2011.DVDSCR.XviD-GooN/" "the-thin-red-line_english-327485.zip" "The Wire Season 1, 2, 3, 4 & 5 Complete Collection DVD Box Set HDTV + Extras (Interviews, Commentaries, Bonus Features etc.)/" "The Thin Red Line[1998]BRRip Xvid[AC3]-ExtraTorrentRG/" "The Office-Season 6 Complete/" "The Office Season 5 DvDrip-McTav/" "The Office Season 4 DvDrip-McTav/" "The Office Season 3 DvDrip-McTav/" "The Office Season 2 DvDrip-McTav/" "The Office Season 1 DvDrip-McTav/" "The Fighter (2010) DVDRip XviD-MAXSPEED/" "TextWrangler_4.0.dmg" "src.rar" "src (1).rar" "Spartacus Vengeance - Complete Season/" "Skype_5.7.60.1037.dmg" "similar_items.htm" "similar_items (1).htm" "sim_substitute.html" "sim_complementery.html" "sim_cat.html" "sim_cat (1).html" "shim.jar" "SalesLift Merchants Modeling status 6.13.12.docx" "S3-Browser-1.1.zip" "S3 Browser.app/" "S3 Browser 2.app/" "RunaRemoteDesktopInstaller.pkg" "runa-validator.pem" "RealPlayerSP.dmg" "R-2.15.1.pkg" "ProxifierMacBeta.zip" "Proxifier.app/" "prometheus original motion picture soundtrack/" "Prometheus 2012 DVDRIP XviD-ENABLE/" "project.clj" "prod0 io-collect_and_promo_96_hours.png" "pmods.pem" "photo.JPG" "Photo on 7-13-12 at 1.jpg" "PGM_Programming_Assignment_4.zip" "pg5000.txt" "person_axis.pdf" "person_axis (1).pdf" "peakload.png" "Paul (2011) DVDRip XviD-MAXSPEED/" "octave-3.4.0-i386.dmg" "moneyball.(2011).eng.1cd.(4433278).zip" "moneyball.(2011).eng.1cd.(4433278)/" "mondrian-3.3.0.14703.zip" "mission.impossible.ghost.protocol.(2011).eng.1cd.(4504773).zip" "mission.impossible.ghost.protocol.(2011).eng.1cd.(4504773)/" "Mission Impossible 4 Ghost Protocol (2011) DVDRip XviD-MAXSPEED/" "Melancholia.2011.DVDRiP.XViD-PSiG/" "Melancholia.2007.DVDRip.XViD-DOCUMENT.(UsaBit.com)/" "Melancholia 2011 BRrip XviD.srt" "Mad.Men.S05E13.HDTV.x264-ASAP.mp4" "Mad.Men.S05E12.HDTV.x264-ASAP.mp4" "Mad.Men.S05E11.The.Other.Woman.HDTV.x264-ASAP.mp4" "Mad.Men.S05E10.HDTV.x264-ASAP.mp4" "Mad.Men.S05E09.HDTV.x264-ASAP.mp4" "Mad.Men.S05E08.HDTV.x264-ASAP.mp4" "Mad.Men.S05E07.HDTV.x264-ASAP.mp4" "Mad.Men.S05E06.PROPER.HDTV.x264-2HD.mp4" "Mad.Men.S05E05.Signal.30.HDTV.XviD-FQM.avi" "Mad.Men.S05E04.HDTV.x264-ASAP.mp4" "Mad.Men.S05E03.HDTV.RM-ASAP.3gp" "Mad.Men.S05E01-E02.HDTV.x264-ASAP.mp4" "Mad Men_4x03_HDTV.FEVER.en.zip" "Mad Men Season 1, 2, 3 & 4 DVD Boxset+ Extras  (Minisodes etc) DVDRip, HDTV/" "MacVim-snapshot-62/" "mac_GitHub for Mac 1.2.7.zip" "LEGACY-OSX-10_6-MacVim-snapshot-62.tbz" "ldv5000.html" "Knowing[2009]DvDrip[Eng]-FXG/" "iTerm2-1_0_0_20120326-unofficial.zip" "iTerm.app/" "introducing_cascalog-_functional_data_processing_for_hadoop_-_stefan_hübner_1280x720.mp4" "IMG_0372.MOV" "IMG_0372 (1).MOV" "IMG_0371.MOV" "IMG_0369.MOV" "IMG_0364.MOV" "IMG_0360.MOV" "IMG_0360 (1).MOV" "IMG_0351.MOV" "IMG_0350.MOV" "IMG_0325.MOV" "IMG_0288.MOV" "IMG_0288 (1).MOV" "IMG_0257.MOV" "IMG_0198.MOV" "IMG_0197.MOV" "IMG_0176.MOV" "IMG_0142.MOV" "IMG_0121.MOV" "IMG_0114.MOV" "image026.jpg" "image009.jpg" "IAMCli.zip" "IAMCli-1.4.0/" "HSS-2.55-install-anchorfree-393-conduit.exe" "Horrible.Bosses.2011.DVDRip.XviD-AMIABLE/" "hbase-0.92.1.tar.gz" "hbase-0.92.1.jar" "hbase-0.92.1/" "HBase and Hive at StumbleUpon Presentation.ppt" "HBase and Hive at StumbleUpon Presentation (1).ppt" "hardcopy.1.txt" "hadoopresources.zip" "hadoopresources/" "hadoop-1.0.3.tar.gz" "hadoop-1.0.3/" "gp460os2.zip" "GoogleVoiceAndVideoSetup.dmg" "googlechrome.dmg" "gnuplot/" "git-1.7.9.4-intel-universal-snow-leopard.dmg" "Game.of.Thrones.S02E10.HDTV.x264-ASAP.mp4" "Game.of.Thrones.S02E09.HDTV.x264-ASAP.mp4" "Game.of.Thrones.S02E08.HDTV.x264-ASAP.mp4" "Game.of.Thrones.S02E06.HDTV.x264-2HD.mp4" "Game.of.Thrones.S02E05.HDTV.x264-ASAP.mp4" "Game of Thrones_2x10_480p HDTV.x264-IMMERSE.en.zip" "Game of Thrones_2x09_720p HDTV.Immerse.en.zip" "Game of Thrones_2x05_HDTV.ASAP.en.zip" "Game of Thrones S02E07 HDTV XviD-MGD[ettv]/" "Game of Thrones - 2x10 - Valar Morghulis.480p HDTV.x264-IMMERSE.en.srt" "Game of Thrones - 2x09 - Blackwater.720p HDTV.Immerse.en.srt" "Game of Thrones - 2x09 - Blackwater.720p HDTV.Immerse.en 2.srt" "Game of Thrones - 2x05 - The Ghost Of Harrenhal.HDTV.ASAP.en.srt" "FileZilla_3.5.3_i686-apple-darwin9.app.tar.bz2" "ex7.zip" "ex6.zip" "ex3.zip" "ex3/" "ex2.zip" "ex2/" "En.Hi.srt" "Emacs-pretest-24.0.90-universal-10.6.7.dmg" "emacs-24.1.tar.gz" "Emacs-24.1-universal-10.6.8.dmg" "emacs-24.1/" "eclipse-java-juno-macosx-cocoa-x86_64.tar.gz.torrent" "eclipse-java-juno-macosx-cocoa-x86_64.tar.gz" "DragonDisk-1.00.dmg" "download.html" "download" "DominosOrder.html" "Current Call.jpg" "Cross-Prismatic.pdf" "Crazy.Stupid.Love.DVDRip.XviD-TWiZTED/" "Coriolanus[2011] LiMiTED BRRip XviD-ETRG/" "Contagion.2011.DVDRip.XviD-AMIABLE/" "contagion.(2011).eng.1cd.(4435769).zip" "contagion.(2011).eng.1cd.(4435769)/" "compare_models.xlsm.cpgz" "compare_models.xlsm" "Common Expenses.xls" "Chronicle.2012.DVDRip.XviD-SPARKS/" "BuyersGuide-May.pdf" "Brick 2005 DVDRip Xvid fasamoo LKRG/" "Breaking Bad Season 1, 2, 3 & 4 + Extras DVDRip HDTV TSV/" "brainworkshop-4.8.1-MacOSX.zip" "BitTorrent.dmg" "Battlestar Galactica/" "bangalore.ics" "Babbel-OSX-intel-120107.14.dmg" "ATT00025.jpg" "Arrested Development Seasons  1-3/" "Angela_Jonsson_7_qhajp.jpg" "androidfiletransfer.dmg" "AdbeRdr1013_en_US.dmg" "About Downloads.pdf" "[ UsaBit.com ] - Moneyball 2011 BRRip XviD-FTW/" "[ UsaBit.com ] - Iron Sky.2012.TS.AC3.XViD-WBZ/" "553254.zip" "481046_413690705318329_1742424264_n.jpg" "4617NNNN0261NNNN.pdf" "4617NNNN0261NNNN (3).pdf" "4617NNNN0261NNNN (2).pdf" "4617NNNN0261NNNN (1).pdf" "445861.zip" "30 Rock.Season 2 Complete HDTV XVID-soagg/" "30 Rock Season 4/" "30 Rock Season 3 DvDrip-McTav/" "30 Rock Season 1 Complete HDTV-soagg/" "30 Rock - The Complete Season 5 [HDTV]/" "2010 The Year We Make Contact, 1984 - BluRay 720p DD x264/" "1001101.pdf" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/featuresextraction/src/" (20501 3931) "java/" "featuresextraction/" "../" "./")
+
+ ("/Users/pranav/work/cascatrial/" (20501 3247) "test/" "target/" "src/" "s2-data.txt" "s1_name.txt" "README" "project.clj" "lib/" "follows/" "classes/" "cascatrial.jar" "actions/" ".lein-plugins/" ".lein-deps-sum" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/" (20501 3195) "workspace/" "vim7.3-config/" "userguide.pdf" "toinstall.rtf" "toinstall" "thrift/" "swank-clojure/" "stefan_hübner_-_introducing_cascalog-_functional_data_processing_for_hadoop_1280x720.mp4" "shoes_output/" "scripts/" "runa_cookbooks/" "runa.txt" "Runa Sync June 11 2012.m4v" "runa/" "roughwork" "python/" "presentation material/" "present-casca/" "perax_append_historical_features_map.py" "newcasca/" "mondrian-3.3.0.14703/" "modeling papers/" "maple/" "lein~" "lein" "installed-packages" "hhh.txt" "hbasetrial/" "hbasenew/" "hbase-likely/" "hbase-java-sample/" "hbase-cascalog/" "hbase-0.92.1/" "hadoop-commands.rtf" "hadoop-1.0.3/" "guid" "featuresextraction/" "emacs-config/" "dbhbase.clj" "dataout/" "dataextraction/" "data-hbase/" "data/" "clojure-hbase/" "clojure-hadoop/" "caterpillar/" "cascatrial.zip" "cascatrial/" "cascalog-examples/" "cascalog-demo/" "cascalog/" "cascading_through_hadoop-_a_dsl_for_simpler_mapreduce_1456x468.mp4" "cascading.txt" "cascading/" "casca-queries.txt" "10Algorithms-08.pdf" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/cascatrial/src/java/" (20499 59764) "MyTableRecordReaderImpl.java" "MyTableRecordReader.java" "MyTableInputFormatBase.java" "MyTableInputFormat.java" "HelloJava.java" "com/" "cascading/" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/cascatrial/src/java/com/twitter/maple/hbase/" (20499 59233) "HBaseTapCollector.java" "HBaseTap.java" "HBaseScheme.java" "../" "./")
+
+ ("/var/folders/u9/u9y1dv9pGMihZHpjM2JMW++++TI/-Tmp-/temp24137010878271735391343197074775143000/" (20495 36757) "../" "./")
+
+ ("//" (20483 50242) "Volumes/" "var/" "usr/" "Users/" "tmp/" "System/" "summary_med" "sbin/" "private/" "out/" "Network/" "net/" "mach_kernel" "Library/" "lib" "home/" "etc/" "Developer/" "dev/" "cores/" "bin/" "Applications/" ".vol/" ".Trashes/" ".Spotlight-V100/" ".hotfiles.btree" ".fseventsd/" ".file" ".DS_Store" ".dmg_background.png" "../" "./")
+
+ ("/Users/pranav/work/cascatrial/src/java/cascading/flow/stream/" (20490 32049) "ValueAssertionEachStage.java" "TrapHandler.java" "StreamGraph.java" "StepStreamGraph.java" "Stage.java" "SpliceGate.java" "SparseTupleComparator.java" "SourceStage.java" "SinkStage.java" "Reducing.java" "OperatorStage.java" "OpenWindow.java" "OpenReducingDuct.java" "OpenDuct.java" "MergeStage.java" "MemorySpliceGate.java" "MemoryHashJoinGate.java" "MemoryCoGroupGate.java" "MemoryCoGroupClosure.java" "Mapping.java" "JoinStage.java" "Grouping.java" "GroupAssertionEveryStage.java" "Gate.java" "FunctionEachStage.java" "Fork.java" "FilterEachStage.java" "EveryStage.java" "ElementStage.java" "ElementFlowProcess.java" "ElementDuct.java" "EachStage.java" "DuctGraph.java" "DuctException.java" "Duct.java" "Collapsing.java" "CloseWindow.java" "CloseReducingDuct.java" "BufferEveryWindow.java" "AggregatorEveryStage.java" "../" "./")
+
+ ("/Users/pranav/work/cascatrial/src/java/cascading/flow/" (20490 32049) "stream/" "StepCounters.java" "SliceCounters.java" "planner/" "FlowStepStrategy.java" "FlowStep.java" "FlowSkipStrategy.java" "FlowSkipIfSinkNotStale.java" "FlowSkipIfSinkExists.java" "FlowSession.java" "Flows.java" "FlowProps.java" "FlowProcessWrapper.java" "FlowProcess.java" "FlowListener.java" "FlowException.java" "FlowElement.java" "FlowDef.java" "FlowConnectorProps.java" "FlowConnector.java" "Flow.java" "BaseFlow.java" "../" "./")
+
+ ("/Users/pranav/work/cascatrial/src/java/cascading/tuple/" (20494 25071) "util/" "Tuples.java" "TupleException.java" "TupleEntrySchemeIterator.java" "TupleEntrySchemeCollector.java" "TupleEntryIterator.java" "TupleEntryCollector.java" "TupleEntryChainIterator.java" "TupleEntry.java" "Tuple.java" "StreamComparator.java" "io/" "Hasher.java" "FieldsResolverException.java" "Fields.java" "Comparison.java" "collect/" "../" "./")
+
+ ("/Users/pranav/work/cascatrial/src/java/cascading/scheme/" (20493 3091) "util/" "SourceCall.java" "SinkCall.java" "Scheme.java" "NullScheme.java" "ConcreteCall.java" "../" "./")
+
+ ("/Users/pranav/work/cascatrial/src/java/com/twitter/maple/jdbc/db/" (20493 9084) "DBWritable.java" "DBOutputFormat.java" "DBInputFormat.java" "DBConfiguration.java" "../" "./")
+
+ ("/Users/pranav/work/cascatrial/src/java/com/twitter/maple/tap/" (20477 8469) "TupleWrapper.java" "TupleMemoryInputFormat.java" "StdoutTap.java" "MemorySourceTap.java" "../" "./")
+
+ ("/Users/pranav/work/hbase-0.92.1/logs/" (20494 5194) "hbase-pranav-master-Pranav-Modis-MacBook-Pro.local.out.5" "hbase-pranav-master-Pranav-Modis-MacBook-Pro.local.out.4" "hbase-pranav-master-Pranav-Modis-MacBook-Pro.local.out.3" "hbase-pranav-master-Pranav-Modis-MacBook-Pro.local.out.2" "hbase-pranav-master-Pranav-Modis-MacBook-Pro.local.out.1" "hbase-pranav-master-Pranav-Modis-MacBook-Pro.local.out" "hbase-pranav-master-Pranav-Modis-MacBook-Pro.local.log" "hbase-pranav-master-modified.local.out.5" "hbase-pranav-master-modified.local.out.4" "hbase-pranav-master-modified.local.out.3" "hbase-pranav-master-modified.local.out.2" "hbase-pranav-master-modified.local.out.1" "hbase-pranav-master-modified.local.out" "hbase-pranav-master-modified.local.log.2012-07-21" "hbase-pranav-master-modified.local.log.2012-07-18" "hbase-pranav-master-modified.local.log" "../" "./")
+
+ ("/Users/pranav/work/hbase-0.92.1/" (20474 49531) "src/" "security/" "README.txt" "pom.xml" "NOTICE.txt" "logs/" "LICENSE.txt" "lib/" "hbase-webapps/" "hbase-0.92.1.jar" "hbase-0.92.1-tests.jar" "docs/" "conf/" "CHANGES.txt" "bin/" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/cascatrial/src/java/com/twitter/maple/jdbc/" (20477 8469) "TupleRecord.java" "TableDesc.java" "JDBCTapCollector.java" "JDBCTap.java" "JDBCScheme.java" "db/" "../" "./")
+
+ ("/Users/pranav/work/cascatrial/src/java/cascading/" (20490 32049) "util/" "tuple/" "tap/" "stats/" "scheme/" "provider/" "property/" "pipe/" "operation/" "management/" "flow/" "CascadingException.java" "cascade/" "../" "./")
+
+ ("/Users/pranav/work/cascading/src/core/" (20491 47122) "cascading/" "build.gradle" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/cascading/" (20490 51873) "version.properties" "version.gradle" "src/" "settings.gradle" "README.md" "LICENSE.txt" "CHANGES.txt" "build.gradle" "apl.txt" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/maple/" (20489 15738) "test/" "src/" "README.md" "project.clj" "maple-0.2.1.jar" "lib/" "classes/" ".lein-deps-sum" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/cascading/src/core/cascading/util/" (20490 32049) "Version.java" "Util.java" "SingleValueIterator.java" "SingleValueCloseableIterator.java" "SingleCloseableInputIterator.java" "ShutdownUtil.java" "Pair.java" "CloseableIterator.java" "../" "./")
+
+ ("/Users/pranav/work/cascading/src/" (20490 51878) "xml/" "testing.gradle" "test/" "local/" "hadoop/" "core/" "build.gradle" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/cascading/src/core/cascading/scheme/" (20490 54101) "util/" "SourceCall.java" "SinkCall.java" "Scheme.java" "NullScheme.java" "ConcreteCall.java" "../" "./")
+
+ ("/Users/pranav/work/cascading/src/core/cascading/tuple/" (20490 36660) "util/" "Tuples.java" "TupleException.java" "TupleEntrySchemeIterator.java" "TupleEntrySchemeCollector.java" "TupleEntryIterator.java" "TupleEntryCollector.java" "TupleEntryChainIterator.java" "TupleEntry.java" "Tuple.java" "StreamComparator.java" "io/" "Hasher.java" "FieldsResolverException.java" "Fields.java" "Comparison.java" "collect/" "../" "./")
+
+ ("/Users/pranav/work/cascading/src/core/cascading/flow/stream/" (20490 32049) "ValueAssertionEachStage.java" "TrapHandler.java" "StreamGraph.java" "StepStreamGraph.java" "Stage.java" "SpliceGate.java" "SparseTupleComparator.java" "SourceStage.java" "SinkStage.java" "Reducing.java" "OperatorStage.java" "OpenWindow.java" "OpenReducingDuct.java" "OpenDuct.java" "MergeStage.java" "MemorySpliceGate.java" "MemoryHashJoinGate.java" "MemoryCoGroupGate.java" "MemoryCoGroupClosure.java" "Mapping.java" "JoinStage.java" "Grouping.java" "GroupAssertionEveryStage.java" "Gate.java" "FunctionEachStage.java" "Fork.java" "FilterEachStage.java" "EveryStage.java" "ElementStage.java" "ElementFlowProcess.java" "ElementDuct.java" "EachStage.java" "DuctGraph.java" "DuctException.java" "Duct.java" "Collapsing.java" "CloseWindow.java" "CloseReducingDuct.java" "BufferEveryWindow.java" "AggregatorEveryStage.java" "../" "./")
+
+ ("/Users/pranav/work/cascading/src/core/cascading/flow/" (20490 32049) "stream/" "StepCounters.java" "SliceCounters.java" "planner/" "FlowStepStrategy.java" "FlowStep.java" "FlowSkipStrategy.java" "FlowSkipIfSinkNotStale.java" "FlowSkipIfSinkExists.java" "FlowSession.java" "Flows.java" "FlowProps.java" "FlowProcessWrapper.java" "FlowProcess.java" "FlowListener.java" "FlowException.java" "FlowElement.java" "FlowDef.java" "FlowConnectorProps.java" "FlowConnector.java" "Flow.java" "BaseFlow.java" "../" "./")
+
+ ("/Users/pranav/work/cascading/src/core/cascading/tap/" (20490 32049) "TapException.java" "Tap.java" "SourceTap.java" "SinkTap.java" "SinkMode.java" "MultiSourceTap.java" "MultiSinkTap.java" "CompositeTap.java" "BaseTemplateTap.java" "../" "./")
+
+ ("/Users/pranav/work/cascading/src/core/cascading/" (20490 32049) "util/" "tuple/" "tap/" "stats/" "scheme/" "provider/" "property/" "pipe/" "operation/" "management/" "flow/" "CascadingException.java" "cascade/" "../" "./")
+
+ ("/Users/pranav/work/cascatrial/src/java/com/twitter/maple/" (20466 62621) "tap/" "jdbc/" "hbase/" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/cascatrial/src/java/com/twitter/" (20466 61614) "maple/" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/cascatrial/src/java/com/" (20466 61614) "twitter/" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/maple/src/jvm/com/twitter/maple/hbase/" (20489 16689) "HBaseTapCollector.java" "HBaseTap.java" "HBaseScheme.java" "../" "./")
+
+ ("/Users/pranav/work/cascatrial/src/" (20489 17293) "java/" "cascatrial/" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/maple/src/jvm/com/twitter/maple/jdbc/" (20477 8469) "TupleRecord.java" "TableDesc.java" "JDBCTapCollector.java" "JDBCTap.java" "JDBCScheme.java" "db/" "../" "./")
+
+ ("/Users/pranav/personal/vision-code/Visionhttpclient/http/mongobackup/src/ekahau/vision/" (20486 36407) "xml/" "VisionServlet.clj" "uri.clj" "tools.clj" "todolist_service.clj" "site_service.clj" "server.clj" "routes.clj" "routes/" "repl_utils.clj" "properties.clj" "predicate.clj" "par_snapshot.clj" "par_management.clj" "par_history_service.clj" "model/" "location_service.clj" "location_history_report_service.clj" "location_history_report/" "json/" "grouping.clj" "fake.clj" "export_service.clj" "event_service.clj" "event_search_service.clj" "event_rule_service.clj" "event_report_service.clj" "event/" "engine_service.clj" "database.clj" "conf/" "columns.clj" "asset_service.clj" "asset_import.clj" "../" "./")
+
+ ("/Users/pranav/personal/vision-code/Visionhttpclient/http/mongobackup/src/ekahau/" (20486 36407) "xml.clj" "vision/" "util.clj" "UID.clj" "tools/" "time.clj" "string.clj" "simulation/" "seq_utils.clj" "reports.clj" "queue.clj" "predicates.clj" "math.clj" "logutil.clj" "http.clj" "excel.clj" "event_statistics.clj" "event_statistics/" "entity.clj" "engine.clj" "engine/" "email.clj" "db/" "conf/" "../" "./")
+
+ ("/Users/pranav/personal/vision-code/Visionhttpclient/http/mongobackup/src/" (20486 36407) "log4j.properties" "ekahau/" "../" "./")
+
+ ("/Users/pranav/personal/vision-code/Visionhttpclient/http/mongobackup/" (20486 36409) "vision.ns" "vision.0" "test.ns" "test.0" "src/" "mongod.lock" "../" "./")
+
+ ("/Users/pranav/personal/vision-code/Visionhttpclient/http/" (20486 36409) "toright.txt" "todonew.txt" "tagsstatus.txt" "sensortype.txt" "sensorrule.txt" "sensorasset.txt" "searchtags.txt" "safetyswitch.txt" "results.txt" "report.txt" "redhttppost.txt" "redbuttonrule.txt" "randomstuff.rtf" "post.txt" "parlevel.txt" "newdwellabsence.txt" "mongobackup/" "messages.txt" "messageformat.txt" "Loop1.jmx" "jsonmessages.txt" "inmotionscan.txt" "inmotion.txt" "imp.txt" "httptrial.java" "httppost.txt" "httpget.txt" "httpCall.txt" "http.txt" "HTTP Request.jmx" "Graph Results.jmx" "eventrule.txt" "eventpost.txt" "emailtest.txt" "emailrule.txt" "dwellabsence.txt" "bluebuttonrule.txt" "bindtags.txt" "bindsensor.txt" "assettype.txt" "assets7070.txt" "assets1.txt" "assets.txt" "arearule.txt" "alertrule.txt" "../" "./")
+
+ ("/Users/pranav/personal/vision-code/Visionhttpclient/" (20486 36409) "src/" "readme.txt" "http/" ".git/" "../" "./")
+
+ ("/Users/pranav/personal/vision-code/" (20486 36399) "Visionhttpclient/" "../" "./")
+
+ ("/Users/pranav/work/cascalog/" (20483 48531) "test/" "target/" "src/" "README.md" "project.clj" "outtemp/" "LICENSE.txt" "lib/" "gendoc.sh" "example.job-conf.clj" "CHANGELOG.md" "apl.txt" ".travis.yml" ".lein-plugins/" ".lein-deps-sum" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/pranav/work/maple/src/clj/" (20477 18881) "maple-trial.clj" "../" "./")
+
+ ("/Users/pranav/work/newcasca/" (20483 47926) "test/" "src/" "README" "project.clj" "lib/" ".lein-deps-sum" ".gitignore" "../" "./")
+
+ ("/Users/pranav/work/cascalog/src/clj/" (20428 35592) "cascalog/" "../" "./")
+
+ ("/Users/pranav/work/cascalog/src/" (20428 62231) "jvm/" "clj/" ".DS_Store" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

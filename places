@@ -1,0 +1,9 @@
+;;; -*- coding: utf-8 -*-
+(("/Users/pranav/.emacs.d/elpa/clojure-mode-1.11.5/clojure-mode-autoloads.el" . 1100)
+ ("/Users/pranav/.emacs.d/elpa/elisp-slime-nav-0.2/elisp-slime-nav-autoloads.el" . 793)
+ ("/Users/pranav/.emacs.d/elpa/slime-20100404.1/slime-autoloads.el" . 2548)
+ ("/Users/pranav/.emacs.d/elpa/slime-repl-20100404/slime-repl-autoloads.el" . 408)
+ ("/Users/pranav/.emacs.d/elpa/starter-kit-lisp-2.0.3/starter-kit-lisp-autoloads.el" . 1914)
+ ("/Users/pranav/.emacs.d/init.el" . 234)
+ ("/Users/pranav/personal/emacs backup/.emacs.d/init.el" . 19)
+ ("/Users/pranav/work/runa/furtive/src/furtive/utils/core.clj" . 572))

@@ -1,0 +1,330 @@
+(ns furtive.init
+  (:use
+    [furtive.monitoring]
+    [furtive.utils.core]
+    [org.rathore.amit.capjure :exclude (flatten)]
+    [org.rathore.amit.capjure-init]
+    [org.rathore.amit.utils.clojure :only (defmemoized)]
+    [org.runa.swarmiji.config.system-config]
+    [org.rathore.amit.medusa.core]
+    [org.runa.swarmiji.mpi.transport]
+    [org.runa.swarmiji.sevak.bindings]
+    [clojure.test]
+    [org.rathore.amit.utils config rabbitmq])
+  (:require
+    [furtive.hbase.gateway :as hbase]
+    [furtive.io.quova :as quova]
+    [furtive.io.redis :as io.redis]
+    [furtive.reporting.user :as user]
+    [furtive.whitequeen.merchant.user :as merchant]
+    [furtive.reporting.session_summary_job :as session-summary-job]
+    [furtive.reporting.last_processed_consumer_event :as last-processed-consumer-event]
+    [redis :as redis-clojure])
+  (:import
+   [java.net URLEncoder URLDecoder]
+   [javax.net.ssl HostnameVerifier HttpsURLConnection]))
+
+;; HACK: Turn off reflection warnings GLOBALLY, since it is turned on
+;; by redis-clojure.
+(set! *warn-on-reflection* false)
+
+(defn print-error-and-exit [var-name]
+  (println "Please set the environment variable for:" var-name))
+
+(defn exit-if-nil [var-name value]
+  (if (empty? value) (print-error-and-exit var-name)))
+
+(defmacro def-from-required-env-var [def-name env-var-name]
+  `(do (def ~def-name (System/getenv ~env-var-name))
+       (exit-if-nil ~env-var-name ~def-name)))
+
+(defmacro defn-from-required-env-var [name env-var-name]
+  `(do (defn ~name [] (System/getenv ~env-var-name))
+       (exit-if-nil ~env-var-name (~name))))
+
+(def-from-required-env-var furtive-env "FURTIVE_ENV")
+(def-from-required-env-var furtive-home "FURTIVE_HOME")
+(def-from-required-env-var summarizer-ns "SUMMARIZER_NS")
+(defn-from-required-env-var git-head-sha "GIT_HEAD_SHA")
+
+(defn running-in-production? []
+  (= "production" furtive-env))
+
+(defn running-in-staging? []
+  (= "staging" furtive-env))
+
+(defn running-in-development? []
+  (= "development" furtive-env))
+
+(defn running-in-test? []
+  (= "test" furtive-env))
+
+(defn current-env []
+  furtive-env)
+
+;; SUMMARIZER NS FUNCS
+(declare *NS-MAPPER-SPEC*)
+(defn redis-db-for [namespace]
+  ((*NS-MAPPER-SPEC* (keyword namespace)) :redis-db))
+
+(defn summarizer-db-subname-for [host the-furtive-env the-summarizer-ns]
+  (str "//" host "/furtive_" the-furtive-env "_" the-summarizer-ns))
+
+(defn furtive-user-for [env config]
+  (:furtive-username ((keyword env) config)))
+
+(declare *SUMMARIZER-DB-SPEC* *SUMMARIZER-REDIS-SPEC* *REDQUEEN-REDIS-SPEC* *S3-SPEC*
+         *RUNA-MERCHANT-DASHBOARD-HOST* *RUNA-ASSETS-URL* *SOCASH-SPEC*
+         *RUNA-DASHBOARD-DB-SPEC* *FURTIVE-CONFIG* *REDQUEEN-JS-ROOT* *GEO-LOCATION-SPEC*
+         *MONETDB-SPEC* *DIGESTER-SPEC*)
+
+(defn load-furtive-spec []
+  (let [fe (keyword furtive-env)
+        socash-spec (if (bound? #'*SOCASH-SPEC*)
+                      *SOCASH-SPEC*)]
+    (defn summarizer-ns-set []
+      (set (doall (map name (keys *NS-MAPPER-SPEC*)))))
+    (def summarizer-db-spec (*SUMMARIZER-DB-SPEC* fe))
+    (def summarizer-redis-spec (*SUMMARIZER-REDIS-SPEC* fe))
+    (def redqueen-redis-spec (*REDQUEEN-REDIS-SPEC* fe))
+    (def redqueen-js-root (*REDQUEEN-JS-ROOT* fe))
+    (def s3-spec (*S3-SPEC* fe))
+    (def socash-url (:url (fe socash-spec)))
+    (def runa-merchant-dasbhoard-home (*RUNA-MERCHANT-DASHBOARD-HOST* fe))
+    (def runa-assets-url (*RUNA-ASSETS-URL* fe))
+    (def runa-dashboard-db-spec (*RUNA-DASHBOARD-DB-SPEC* fe))
+    (def geo-url (or (:url (*GEO-LOCATION-SPEC* fe))
+                     "http://api.quova.com/"))
+    (def geo-auth-key (:key (*GEO-LOCATION-SPEC* fe)))
+    (def geo-secret-key (:secret (*GEO-LOCATION-SPEC* fe)))
+    (def monetdb-spec (*MONETDB-SPEC* fe))))
+
+(defn load-furtive-config [config-file]
+  (let [conf (or config-file "config/config.clj")]
+    (load-file conf)
+    (load-furtive-spec)))
+
+(defn config [property]
+  ((*FURTIVE-CONFIG* (keyword furtive-env)) (keyword property)))
+
+(defn digester-spec [property]
+  ((*DIGESTER-SPEC* (keyword furtive-env)) (keyword property)))
+
+(defn table-user-env []
+  (str (config :furtive-username) "_" furtive-env))
+
+(defn table-name
+  ([canonical]
+     (str (table-user-env) "_" canonical))
+  ([canonical the-summarizer-ns]
+     (str (table-user-env) "_" the-summarizer-ns "_" canonical)))
+
+;;(def PID (process-pid))
+
+(defn clj-utils-config [process-type-id]
+  {:log-to-console (config :log-to-console)
+   :logs-dir (config :logs-dir)
+   :log-filename-prefix (str process-type-id "_" furtive-env)
+   :exception-notifier {:enabled (config :email-errors-enabled)
+                        :from "furtive-admin@runa.com"
+                        :to (config :email-errors-to)
+                        :subject-prefix (str "[" process-type-id "]")}
+   :syslog-enabled (config :syslog-enabled)
+   :syslog-facility :local7})
+
+(defmemoized gen-table-config [summarizer-ns]
+  {:serenity-session-ids (table-name "serenity_session_ids")
+   :serenity-sessions (table-name "serenity_sessions")
+   :serenity-digests (table-name "serenity_digests")
+   :serenity-consumer-history (table-name "serenity_consumer_history")
+   :serenity-bad-events (table-name "serenity_bad_events")
+   :consumer-events (table-name "consumer_events")
+   :consumer-events-index (table-name "consumer_events_index")
+   :debug-events (table-name "debug_events")
+   :debug-event-stream (table-name "debug_event_stream")
+   :latest-consumers (table-name "latest_consumers")
+   :session-event-stream (table-name "session_event_stream")
+   :session-summary (table-name "session_summary" summarizer-ns)
+   :daily-session-summary (table-name "daily_session_summary" summarizer-ns)
+   :monthly-summary (table-name "monthly_summary" summarizer-ns)
+   :merchant-session-events (table-name "merchant_session_events" summarizer-ns)
+   :merchant-session-summary (table-name "session_summary" summarizer-ns)
+   :merchant-product-summary (table-name "merchant_product_summary" summarizer-ns)
+   :merchant-consumer-summary (table-name "merchant_consumer_summary" summarizer-ns)
+   :merchant-order-extract (table-name "merchant_order_extract" summarizer-ns)
+   :merchant-campaign-sale-summary (table-name "merchant_campaign_sale_summary")
+   :rules-engine-processing (table-name "rules_engine_processing")
+   :merchant-summary (table-name "consolidated_merchant_summary")})
+
+(defn load-capjure-mappings []
+  ;; this is here because summarizer-db-spec is required in its dependencies
+  (use 'furtive.rabbitmq.subscriber)
+
+  (def encoders
+       (config-keys
+        (config-for :inserts :merchant_product_id
+                    (fn [insert-map]
+                      (str (insert-map :merchant_product_id) "@" (insert-map :insert_type))))
+        (config-for :products :product-id
+                    (fn [insert-map]
+                      (str (insert-map :product-id) "@" (insert-map :insert-type))))
+        (config-for :latest_consumer :merchant_id
+                    (fn [consumer-map]
+                      (consumer-map :merchant_id)))
+        (config-for :cart_items  :merchant_product_id
+                    (fn [cart-item-map]
+                      (let [sku (cart-item-map :sku)
+                            m-pid (cart-item-map :merchant_product_id)]
+                        (cond
+                         (nil? sku) m-pid
+                         :else (str m-pid "@" (URLEncoder/encode sku "UTF-8"))))))
+        (config-for :items :product-id
+                    (fn [cart-item-map]
+                      (cart-item-map :product-id)))
+        (config-for :jobs :session_id
+                    (fn [status-map]
+                      (status-map :session_id)))))
+
+  (def decoders
+       (config-keys
+        (config-for :inserts :merchant_product_id
+                    (fn [value] (first (.split value "@"))))
+        (config-for :products :product-id
+                    (fn [value] (first (.split value "@"))))
+        (config-for :latest_consumer :merchant_id
+                    (fn [value] value))
+        (config-for :cart_items :merchant_product_id
+                    (fn [value] 
+                      (cond
+                       (.contains value "@") (first (.split (URLDecoder/decode value "UTF-8") "@"))
+                       :else value)))
+        (config-for :items :product_id
+                    (fn [value] value))
+        (config-for :jobs :session_id (fn [value] value))))
+
+  (def keys-config {:encode encoders :decode decoders})
+  (def table-config (gen-table-config summarizer-ns)))
+
+(def guaranteed-sevaks [:save-consumer-event-later :echo-sevak])
+
+(def ^:dynamic *process-type* "undefined")
+
+(deftype NaiveHostnameVerifer []
+      HostnameVerifier
+      (verify [this hostname ssl-cert]
+        true))
+
+(def naive-hostname-verifier (NaiveHostnameVerifer.))
+
+(defn init-ssl-verifiers []
+  (HttpsURLConnection/setDefaultHostnameVerifier naive-hostname-verifier))
+
+(defmacro in-furtive-binding [[process-type] & exprs]
+  `(binding [*process-type* ~process-type]
+     (binding-for-swarmiji [*hbase-master* (config :hbase-master)
+                            *single-column-family?* false
+                            *hbase-single-column-family* "meta"
+                            *primary-keys-config* keys-config
+                            hbase/*cinch-table-config* table-config
+                            hbase/*fast-truncate-disabled* (config :fast-truncate-disabled)
+                            *clj-utils-config* (clj-utils-config ~process-type)
+                            *guaranteed-sevaks* guaranteed-sevaks]
+       (init-ssl-verifiers)
+       (init-all-clj-models)
+       ;; this initializes timeouts in the medusa thread pool.  Disabling for now, and possibly forever.
+       ;;(start-supervisor)
+       (redis-clojure/with-server redqueen-redis-spec
+         (do ~@exprs)))))
+
+(defmacro in-furtive-binding* [[process-type] & exprs]
+  `(binding [*process-type* ~process-type]
+     (binding-for-swarmiji [*hbase-master* (config :hbase-master)
+                            *single-column-family?* false
+                            *hbase-single-column-family* "meta"
+                            *primary-keys-config* keys-config
+                            hbase/*cinch-table-config* table-config
+                            hbase/*fast-truncate-disabled* (config :fast-truncate-disabled)
+                            *clj-utils-config* (clj-utils-config ~process-type)
+                            *guaranteed-sevaks* guaranteed-sevaks]
+       ~@exprs)))
+
+(defmacro in-repl [& exprs]
+  `(in-furtive-binding ["repl"] ~@exprs))
+
+(defmacro in-test-repl [& exprs]
+  `(in-furtive-binding ["repl"]
+     (binding [*swarmiji-env* "test"
+               *test-out* *out*]
+       ~@exprs)))
+
+(defmacro in-redis-repl [& exprs]
+  `(redis-clojure/with-server redqueen-redis-spec (in-furtive-binding ["repl"] ~@exprs)))
+
+(defmacro unsupervised-furtive-binding [[process-type] & exprs]
+  `(binding [*SUPERVISOR-ENABLED* false]
+     (in-furtive-binding [~process-type] ~@exprs)))
+
+(defn load-q-config []
+  (def q-host (config :q-host))
+  (def q-username (config :q-username))
+  (def q-password (config :q-password))
+  (def furtive-q (str "CINCH_ELMER_QUEUE_" furtive-env))
+  (def session-summary-q (str "CINCH_FURTIVE_QUEUE_SESSION_SUMMARY_" furtive-env)))
+
+(defn init-all-clj-models []
+  (user/init-clj-models runa-dashboard-db-spec)
+  (merchant/init-clj-models runa-dashboard-db-spec)
+  (session-summary-job/init-clj-models summarizer-db-spec)
+  (last-processed-consumer-event/init-clj-models summarizer-db-spec))
+
+(defn init-quova-connection []
+  (quova/init-quova geo-url geo-auth-key geo-secret-key))
+
+(defn init-redis-connection []
+  (io.redis/init-redis (:host redqueen-redis-spec) (:port redqueen-redis-spec))
+  (io.redis/redis-client [:select (:db redqueen-redis-spec)]))
+
+(defn load-furtive-env
+  "Load furtive configs when running from CLI (fujure.sh)."
+  ([]
+     (load-furtive-env nil))
+  ([config-file]
+     (binding [*ns* (create-ns 'furtive.init)]
+       (load-furtive-config config-file)
+       (load-capjure-mappings)
+       (load-q-config))
+     #_     (use 'clj-stacktrace.repl
+          '[clojure.pprint :only [pprint pp]])))
+
+(defn load-furtive-emacs
+  "Load furtive configs when running in EMACS SLIME."
+  ([]
+     (load-furtive-emacs (str (System/getenv "FURTIVE_HOME")
+                           "/config/config.clj")))
+  ([config-file]
+     (load-furtive-env config-file)
+     ;; Add useful REPL tools here:
+     (in-ns 'user)
+     (use
+       'clj-stacktrace.repl
+       'clojure.test
+       'furtive.reporting
+       'furtive.spec-utils.spec-utils)))
+
+(defn repl-tests
+  ([]
+     (repl-tests *ns*))
+  ([ns]
+     (in-repl
+      (redis-clojure/with-server redqueen-redis-spec
+        (binding [*swarmiji-env* "test"]
+          (clojure.test/run-tests ns))))))
+
+(defn run-test
+  "Run a unit test. You need to"
+  [testcase-symbol] {:pre [(symbol? testcase-symbol)]}
+  (let [tc (resolve testcase-symbol)]
+    (if tc
+      (in-repl (binding [*test-out* *out*] (tc)))
+      (throw (IllegalArgumentException.
+              (str "Cannot resolve var: " testcase-symbol))))))
